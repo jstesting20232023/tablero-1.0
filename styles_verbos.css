@@ -1,0 +1,22 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: black; /* Fondo negro */
+    color: #32CD32; /* Texto verde amigable a la vista */
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+    width: 100%; /* Asegurar que el contenedor tome todo el ancho */
+}
+
+iframe {
+    border: none;
+    width: 100%;
+    height: 600px; /* Ajusta la altura según sea necesario */
+}

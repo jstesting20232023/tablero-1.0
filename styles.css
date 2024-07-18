@@ -1,0 +1,105 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    display: flex;
+    flex: 1;
+    width: 100%;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 10px 0;
+}
+
+.column {
+    flex: 1;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.column.full-height {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.container {
+    background-color: #333; /* Gris oscuro */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    color: #32CD32; /* Verde */
+    margin-bottom: 10px;
+}
+
+.container.full-height {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+#datetime {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+#time {
+    font-size: 2em;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+#timer-controls button,
+#timer-options button {
+    font-size: 1em;
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+#timer-controls button:hover,
+#timer-options button:hover {
+    background-color: #0056b3;
+}
+
+.day-of-week {
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+
+.time-tense {
+    margin: 20px 0;
+}
+
+#tense-title {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+#conjugations {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
