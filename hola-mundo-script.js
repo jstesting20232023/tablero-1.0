@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Agregar el contenido dinámico al final del body o a otro lugar específico
     document.body.appendChild(additionalContentContainer);
 
-    // Función para actualizar el contenido dinámico
+   /* // Función para actualizar el contenido dinámico
     function updateDynamicContent() {
         textContent.textContent = 'Texto actualizado: ' + new Date().toLocaleTimeString();
         anotherContent.textContent = 'Otro contenido actualizado: ' + new Date().toLocaleDateString();
@@ -26,5 +26,5 @@ document.addEventListener('DOMContentLoaded', function() {
     setInterval(updateDynamicContent, 10000);
 
     // Inicializar el contenido dinámico
-    updateDynamicContent();
+    updateDynamicContent();*/
 });
