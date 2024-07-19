@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Seleccionar el contenedor para el contenido dinámico adicional
-    const additionalContentContainer = document.createElement('div');
+    /* const additionalContentContainer = document.createElement('div');
     additionalContentContainer.id = 'additional-content';
     
     // Crear y agregar el contenido dinámico adicional
@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
     additionalContentContainer.appendChild(textContent);
     additionalContentContainer.appendChild(anotherContent);
 
-     /*  // Agregar el contenido dinámico al final del body o a otro lugar específico
+     // Agregar el contenido dinámico al final del body o a otro lugar específico
     document.body.appendChild(additionalContentContainer);
 
     // Función para actualizar el contenido dinámico
