@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var currentDay = daysOfWeek[dayOfWeekIndex];
 
     // Mostrar el día de la semana actual en el HTML
-//    document.getElementById('dayOfWeek').innerText = 'Day: ' + currentDay;
+    //document.getElementById('dayOfWeek').innerText = 'Day: ' + currentDay;
 
     // Función para realizar una solicitud XMLHttpRequest
     function makeRequest(method, url, callback) {
