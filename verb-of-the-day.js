@@ -28,12 +28,16 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             }
         };
+        xhr.onerror = function() {
+            callback('Network error');
+        };
         xhr.send();
     }
 
     // Función para cargar y mostrar un verbo del JSON
     function loadVerbOfTheDay() {
         // Fetch del plan semanal usando XMLHttpRequest
+        console.log('Fetching weekly plan from', resources.weeklyPlan);
         makeRequest('GET', resources.weeklyPlan, function(error, response) {
             if (error) {
                 console.error('Error al cargar el archivo JSON del plan semanal:', error);
@@ -43,11 +47,17 @@ document.addEventListener('DOMContentLoaded', function() {
                 return;
             }
 
+            console.log('Weekly plan response:', response);
             var weeklyPlan = JSON.parse(response);
+            console.log('Parsed weekly plan:', weeklyPlan);
+            
             // Obtener el verbo correspondiente al día de la semana actual
             var selectedVerb = weeklyPlan[currentDay];
+            console.log('Selected verb for', currentDay, ':', selectedVerb);
+
             // Construir la URL del archivo JSON del verbo seleccionado
             var url = resources.verbosBaseUrl + selectedVerb + '.json';
+            console.log('Fetching verb JSON from', url);
 
             // Fetch del JSON del verbo seleccionado usando XMLHttpRequest
             makeRequest('GET', url, function(error, response) {
@@ -59,7 +69,10 @@ document.addEventListener('DOMContentLoaded', function() {
                     return;
                 }
 
+                console.log('Verb JSON response:', response);
                 var verbo = JSON.parse(response);
+                console.log('Parsed verb:', verbo);
+
                 var infinitiveText = verbo.infinitive;
                 document.getElementById('infinitive').innerText = infinitiveText;
 
