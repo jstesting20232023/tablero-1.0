@@ -29,9 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
             } else {
                 clearInterval(timer);
                 document.getElementById('time').innerText = "00:00";
-                alarm.play().catch(function(error) {
-                    console.log('Audio playback failed: ' + error);
-                });
+                alarm.play(); // Reproducir el sonido de la alarma
             }
         }, 1000);
     }
