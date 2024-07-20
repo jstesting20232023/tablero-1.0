@@ -57,20 +57,20 @@ p {
 }
 
 #datetime {
-    font-size: 1.5em;
+    font-size: 5em;
     margin-bottom: 20px;
     font-weight: bold;
 }
 
 #time {
-    font-size: 2em;
+    font-size: 5em;
     font-weight: bold;
     margin: 10px 0;
 }
 
 #timer-controls button,
 #timer-options button {
-    font-size: 1em;
+    font-size: 2.5em;
     padding: 10px 20px;
     margin: 5px;
     border: none;
@@ -95,7 +95,7 @@ p {
 }
 
 #tense-title {
-    font-size: 2em;
+    font-size: 1.5em;
     margin: 10px 0;
 }
 
