@@ -15,8 +15,9 @@ body {
     width: 100%; /* Asegurar que el contenedor tome todo el ancho */
 }
 h1 {
-    font-size: 2em;
-    margin: 0px 0 0px 0; /* Reducir el margen superior e inferior */
+    font-size: 5em;
+    margin-bottom: 10px;
+    margin-top: 0px;
 }
 iframe {
     border: none;
