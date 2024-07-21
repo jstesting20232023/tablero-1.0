@@ -2,7 +2,26 @@ document.addEventListener('DOMContentLoaded', function() {
     // Mostrar la fecha y hora actual en el elemento con id "datetime"
     function updateDateTime() {
         var now = new Date();
-        var formattedDateTime = now.toLocaleString();
+        // Opciones para formato británico
+        var optionsDate = {
+            weekday: 'long',  // Nombre completo del día
+            day: 'numeric',   // Día del mes
+            month: 'long',    // Nombre completo del mes
+            year: 'numeric'   // Año completo
+        };
+        var optionsTime = {
+            hour: '2-digit',
+            minute: '2-digit',
+            second: '2-digit',
+            hour12: false     // Formato de 24 horas
+        };
+
+        // Obtener fecha y hora en formato británico
+        var formattedDate = now.toLocaleDateString('en-GB', optionsDate);
+        var formattedTime = now.toLocaleTimeString('en-GB', optionsTime);
+
+        // Combinar fecha y hora en una sola cadena
+        var formattedDateTime = `${formattedDate} ${formattedTime}`;
         document.getElementById('datetime').innerText = formattedDateTime;
     }
     setInterval(updateDateTime, 1000); // Actualizar cada segundo
@@ -10,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var timer;
     var timeRemaining = 0;
 
-    const alarm = new Audio('alarm.mp3'); // Cargar el archivo de audio
+    var alarm = new Audio('alarm.mp3'); // Cargar el archivo de audio
 
     function updateTimeDisplay() {
         var minutes = Math.floor(timeRemaining / 60);
@@ -29,7 +48,12 @@ document.addEventListener('DOMContentLoaded', function() {
             } else {
                 clearInterval(timer);
                 document.getElementById('time').innerText = "00:00";
-                alarm.play(); // Reproducir el sonido de la alarma
+                // Intenta reproducir el sonido de la alarma
+                if (alarm) {
+                    alarm.play().catch(function(error) {
+                        console.log('Audio playback failed: ' + error);
+                    });
+                }
             }
         }, 1000);
     }
