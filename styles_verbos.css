@@ -14,7 +14,10 @@ body {
     text-align: center;
     width: 100%; /* Asegurar que el contenedor tome todo el ancho */
 }
-
+h1 {
+    font-size: 2em;
+    margin: 0px 0 0px 0; /* Reducir el margen superior e inferior */
+}
 iframe {
     border: none;
     width: 100%;
